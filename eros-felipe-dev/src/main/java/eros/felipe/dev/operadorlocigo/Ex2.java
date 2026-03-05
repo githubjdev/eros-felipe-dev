@@ -1,13 +1,11 @@
 package eros.felipe.dev.operadorlocigo;
 
-public class Ex1 {
-
+public class Ex2 {
 	public static void main(String[] args) {
 
-		boolean temIdade = false; /* vir do banco de dados, maior de 18 anos, da tela */
-		boolean temDocumento = true;
+		boolean emancipado = true;
 
-		if (temIdade() && temDocumento()) { /* Entrada no evento ou sistema */
+		if (temIdade() && temDocumento() || (emancipado && temDocumento())) { /* Entrada no evento ou sistema */
 			System.out.println("Pode entrar");
 		} else {
 			System.out.println("Entrada probida");
@@ -18,12 +16,13 @@ public class Ex1 {
 	
 	public static boolean temIdade() {
 		System.out.println("executou temIdade");
-		return true;
+		return false;
 	}
 	
 	public static boolean temDocumento() {
 		System.out.println("executou temDocumento");
-		return false;
+		return true;
 	}
+
 
 }
